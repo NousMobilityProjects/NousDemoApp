@@ -19,6 +19,7 @@ namespace NousDemoApp.Droid
 
             base.OnCreate(bundle);
 
+            // Load app
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
         }
