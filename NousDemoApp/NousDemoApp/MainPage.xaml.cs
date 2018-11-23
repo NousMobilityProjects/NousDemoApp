@@ -10,20 +10,34 @@ namespace NousDemoApp
         public MainPage()
         {
             InitializeComponent();
-            Analytics.TrackEvent("Nous Demo Project Launched");
-            TrackCrash();
+
+            TrackEvent();
+            SimulateException();
+
+            BtnCrash.Clicked += BtnCrash_Clicked;
         }
 
-        private void TrackCrash()
+        private void BtnCrash_Clicked(object sender, EventArgs e)
+        {
+            int a = 0;
+            int k = 5 / a;
+        }
+
+        private void TrackEvent()
+        {
+            Analytics.TrackEvent("App launched");
+        }
+
+        private void SimulateException()
         {
             try
             {
-                int value = 0;
-                int newValue = 5 / value;
+                int a = 0;
+                int k = 5 / a;
             }
-            catch (Exception exception)
+            catch (Exception e)
             {
-                Crashes.TrackError(exception);
+                Crashes.TrackError(e);
             }
         }
     }

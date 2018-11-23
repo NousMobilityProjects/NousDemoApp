@@ -26,7 +26,7 @@ namespace NousDemoAppTest
         }
 
         [Test]         public void WelcomeTextIsDisplayed()         {
-            AppResult[] results3 = app.WaitForElement(c => c.Marked("CICD Demo Project!"));
+            AppResult[] results3 = app.WaitForElement(c => c.Marked("Nippon CICD Demo"));
             Assert.IsTrue(results3.Any());         }
     }
 }
