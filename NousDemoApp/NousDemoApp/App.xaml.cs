@@ -10,6 +10,7 @@ namespace NousDemoApp
     {
         public App()
         {
+            // Initialize component
             InitializeComponent();
 
             MainPage = new MainPage();
